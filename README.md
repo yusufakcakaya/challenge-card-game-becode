@@ -1,1 +1,10 @@
-# challenge-card-game-becode
+# Are you ready to play a card game?
+## Good Luck!
+###
+♥
+###
+♦
+###
+♣
+###
+♠
