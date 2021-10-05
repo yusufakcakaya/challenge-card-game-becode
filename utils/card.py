@@ -4,7 +4,7 @@ class Symbol:
     This class is created to initiate the icons and colors of the deck.
     """
 
-    def __init__(self, color: str, icon):
+    def __init__(self, color: str , icon):
         self.color = color
         self.icon = icon
 
@@ -17,5 +17,5 @@ class Card(Symbol):
     """
 
     def __init__(self, color, icon, value):
-        super.__init__(color, icon)
+        super().__init__(color, icon)
         self.value = value
