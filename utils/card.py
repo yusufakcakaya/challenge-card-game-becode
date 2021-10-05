@@ -16,13 +16,6 @@ class Card(Symbol):
     This class is inherits from Symbol class.
     """
 
-
-    def __init__(
-            self,
-            color,
-            icon,
-            value
-    ):
+    def __init__(self, color, icon, value):
         super.__init__(color, icon)
         self.value = value
-
