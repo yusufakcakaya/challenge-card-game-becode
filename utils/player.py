@@ -15,27 +15,31 @@ class Player:
         self.history = []   # which is a list of Card that will contain all the cards played by the player
 
     def set_cards(self, cards):
+        """
+        it helps to set the cards of players
+        """
         self.cards = cards
 
     def play(self):
         """
-        randomly pick a Card in cards.
-        Add the Card to the Player's history.
-        Print: {PLAYER_NAME} {TURN_COUNT} played: {CARD_NUMBER} {CARD_SYMBOL_ICON}.
-        Return the Card.
+        it picks randomly  a Card in cards and
+        adds the Card to the Player's history.
         """
         random_card = random.choice(self.cards)
         self.history.append(random_card)
+        self.number_of_cards += 4
         self.cards.remove(random_card)
         self.turn_count += 1
         print(
             f"{self.name},{self.turn_count} played: {random_card.value}{random_card.icon}"
         )
-
         return Card
 
 
 class Deck:
+    """
+    This class is created to initiate the Deck(cards) and to distribute the cards to players
+    """
     def __init__(self):
         self.card = []
 
@@ -59,15 +63,15 @@ class Deck:
 
     def shuffle(self):
         """
-        method that will shuffle all the list of cards.
+        method that shuffle all the list of cards.
 
         """
         random.shuffle(self.card)
 
     def distribute(self, Players):
         """
-        that will take a list of Player as parameter and
-        will distribute the cards evenly between all the players.
+        that takes a list of Player as parameter and
+        distribute the cards evenly between all the players.
 
         """
 
